@@ -34,7 +34,7 @@ public class EmployerController {
         }
 
         employerRepository.save(newEmployer);
-        return "redirect:../";
+        return "redirect:../add";
     }
 
     @GetMapping("view/{employerId}")

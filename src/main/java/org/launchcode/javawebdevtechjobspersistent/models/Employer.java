@@ -14,14 +14,14 @@ public class Employer extends AbstractEntity {
 
     @NotBlank
     @NotNull
-    @Size(min = 2, max = 75, message = "This field must be between 2 and 75 characters.")
+    @Size(min = 1, max = 75, message = "This field must be between 1 and 75 characters.")
     private String location;
 
     @OneToMany
     @JoinColumn
     private List<Job> jobs = new ArrayList<>();
 
-    public Employer(@NotBlank @NotNull @Size(min = 2, max = 75, message = "This field must be between 2 and 75 characters.") String location) {
+    public Employer(@NotBlank @NotNull @Size(min = 1, max = 75, message = "This field must be between 1 and 75 characters.") String location) {
         this.location = location;
     }
 
