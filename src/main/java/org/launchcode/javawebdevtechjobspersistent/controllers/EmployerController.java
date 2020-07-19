@@ -44,6 +44,7 @@ public class EmployerController {
 
         if (optEmployer.isPresent()) {
             Employer employer = (Employer) optEmployer.get();
+            model.addAttribute("title", "Employer ID: " + employerId);
             model.addAttribute("employer", employer);
             return "employers/view";
         } else {

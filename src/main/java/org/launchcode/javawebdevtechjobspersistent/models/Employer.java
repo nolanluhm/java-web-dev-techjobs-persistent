@@ -18,7 +18,7 @@ public class Employer extends AbstractEntity {
     private String location;
 
     @OneToMany
-    @JoinColumn
+    @JoinColumn(name="employer_id")
     private List<Job> jobs = new ArrayList<>();
 
     public Employer(@NotBlank @NotNull @Size(min = 1, max = 75, message = "This field must be between 1 and 75 characters.") String location) {
@@ -35,7 +35,6 @@ public class Employer extends AbstractEntity {
         this.location = location;
     }
 
-    public List<Job> getJobs() {
-        return jobs;
-    }
+    public List<Job> getJobs() { return jobs; }
+
 }
